@@ -4,7 +4,8 @@ module Xgboost
   module FFI
     extend ::FFI::Library
     lib_name = ::FFI.map_library_name('xgboost')
-    lib_path = File.join(Xgboost.root, 'vendor', 'xgboost', 'lib', lib_name)
+    #lib_path = File.join(Xgboost.root, 'vendor', 'xgboost', 'lib', lib_name)
+    lib_path = "/opt/pakwheels/vendor/xgboost/lib/#{lib_name}"
 
     begin
       ffi_lib ['xgboost', lib_path]
